@@ -1,10 +1,8 @@
 #!/bin/bash
 
 cat >>/etc/sysctl.conf <<EOL
-
 # Disable ipv6
 net.ipv6.conf.all.disable_ipv6 = 1
-
 EOL
 
 sed -i.bak 's/NETWORKING_IPV6\=yes/NETWORKING\_IPV6\=no/g' /etc/sysconfig/network
