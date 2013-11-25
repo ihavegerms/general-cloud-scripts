@@ -11,19 +11,16 @@ chkconfig --level 345 ip6tables off
 echo ""
 echo "The machine must be rebooted for the changes to take effect."
 read -p "Would you like to do so now? [y=reboot, n=exit]" answer
+ans=$(echo $answer|tr '[:upper:]' '[:lower:]')
 
-while true;
-do
-if $answer == [Yy]
-then
-    shutdown -r now
-elif $answer == [Nn]
-then
-    exit
+if [ $ans == "y" ]
+ then
+  sudo shutdown -r now
+elif [ $ans == "n" ]
+ then
+  exit
 else
-    echo ""
-    echo "You've entered an invalid response. Please restart when possible."
-    echo "Exiting.."
-    exit
+  echo ""
+  echo "You've entered an invalid response. Please restart when possible."
+  exit
 fi
-done
