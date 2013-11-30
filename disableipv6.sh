@@ -21,6 +21,6 @@ elif [ $ans == "n" ]
   exit
 else
   echo ""
-  echo "You've entered an invalid response. Please restart when possible."
+  echo "You've entered an invalid response. Please restart when possible for the changes to take effect."
   exit
 fi
