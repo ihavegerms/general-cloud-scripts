@@ -24,9 +24,9 @@ if [ $ans == "y" ]
   sudo shutdown -r now
 elif [ $ans == "n" ]
  then
-  exit
+  exit 0
 else
   echo ""
   echo "You've entered an invalid response. Please restart when possible for the changes to take effect."
-  exit
+  exit 1
 fi
